@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CarCrud": {
+    "angular-ngrx-crud": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/CarCrud",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -57,18 +60,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CarCrud:build"
+            "browserTarget": "angular-ngrx-crud:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "CarCrud:build:production"
+              "browserTarget": "angular-ngrx-crud:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CarCrud:build"
+            "browserTarget": "angular-ngrx-crud:build"
           }
         },
         "test": {
@@ -79,6 +82,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -102,7 +107,7 @@
         }
       }
     },
-    "CarCrud-e2e": {
+    "angular-ngrx-crud-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -111,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "CarCrud:serve"
+            "devServerTarget": "angular-ngrx-crud:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "CarCrud:serve:production"
+              "devServerTarget": "angular-ngrx-crud:serve:production"
             }
           }
         },
@@ -131,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "CarCrud"
+  "defaultProject": "angular-ngrx-crud"
 }

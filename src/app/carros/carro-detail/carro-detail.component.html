@@ -1,0 +1,38 @@
+<main class="main-container container-fluid mt-3">
+  <div class="row d-flex justify-content-center">
+    <section class="produtos col-md-12 col-xl-12 mb-1" style="margin-top: 6rem;">
+        <div *ngIf="carro | async; let carro;" class="row">
+          <div class="col-sm-3">
+            <img *ngIf="carro.image" src="{{carro.image}}" alt="{{carro.name}}" width="300px" height="450px"/>
+            <img *ngIf="!carro.image" src="assets/images/not-available.png" width="130px" height="100px"/>
+          </div>
+          <div class="col-sm-9">
+            <div class="row">
+              <label class="col-sm-2">Nome:</label>
+              <div class="col-sm-9">{{carro.titulo}}</div>
+            </div>
+            <div class="row">
+              <label class="col-sm-2">Preço: </label>
+              <div class="col-sm-9">{{carro.preco|currency:'BRL'}}</div>
+            </div>
+            <div class="row">
+              <label class="col-sm-2">Ano: </label>
+              <div class="col-sm-9">{{carro.anoDoModelo}}</div>
+            </div>
+            <div class="row">
+              <label class="col-sm-2">Descrição: </label>
+              <div class="col-sm-9">{{carro.descricao}}</div>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-secondary btn-sm" routerLink="/carros">
+                Voltar
+              </button>
+              <button type="button" (click)="delete(carro.id)" class="btn btn-danger btn-sm">
+                Excluir
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>
+</main>

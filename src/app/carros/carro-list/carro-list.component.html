@@ -1,0 +1,66 @@
+<main class="main-container container-fluid mt-3">
+  <div class="row mt-4 d-flex justify-content-center">
+    
+    <section class="produtos col-md-8 col-xl-9 mb-5 mt-5">
+      <header class="row align-itens-center mt-3">
+        <h1 class="col"></h1>
+        <a class="adicionar-produtos mr-3 ml-3" routerLink="/carros/create">Adicionar Carros</a>
+      </header>
+      <ul>
+        <li *ngFor="let carro of carros" class="produtos-item" routerLink="/carros/detail/{{carro.id}}">
+          <div class="media">
+            <img [src]="getImage(carro)" width="240" height="145" alt="Café 1">
+            <ul class="media-body">
+              <li><span>Nome</span> {{carro.titulo}}</li>
+              <li><span>Preço</span>{{carro.preco|currency:'BRL'}}</li>
+              <li><span>Ano</span> {{carro.anoDoModelo}}</li>
+            </ul>
+            <button routerLink="/carros/edit/{{carro.id}}" class="btn btn-info btn-sm">
+              Editar
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+
+
+<!-- <div class="row">
+  <div class="col-sm-6">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="col-sm-6 align-bottom">
+    <button class="btn btn-primary pull-right" routerLink="/carros/create">Create new carro</button>
+  </div>
+</div>
+<table class="table table-striped" style="text-align: left">
+  <thead>
+  <tr>
+    <th>Imagem</th>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Ano</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let carro of carros | async" routerLink="/carros/detail/{{carro.id}}">
+    <td><img *ngIf="carro.image" src="assets/images/{{carro.image}}" alt="{{carro.name}}" width="80px" height="80px"/></td>
+    <td>{{carro.titulo}}</td>
+    <td>R$ {{carro.preco}}</td>
+    <td>{{carro.anoDoModelo}}</td>
+    <td>
+      <div class="btn-group">
+        <button routerLink="/carros/edit/{{carro.id}}" class="btn btn-info btn-sm">
+          <i class="fa fa-pencil-square-o"></i>
+        </button>
+        <button (click)="delete(carro.id)" class="btn btn-danger btn-sm">
+          <i class="fa fa-times"></i>
+        </button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table> -->

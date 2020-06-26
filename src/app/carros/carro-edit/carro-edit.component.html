@@ -1,0 +1,254 @@
+<main class="main-container container-fluid mt-3">
+  <div class="row d-flex justify-content-center">
+    <section class="produtos col-md-12 col-xl-12 mb-1" style="margin-top: 6rem;">
+          <div class="row">
+            <div class="col-sm-3">
+              <img *ngIf="carro.image" src="assets/images/{{carro.image}}" alt="{{carro.name}}" width="300px" height="450px"/>
+              <img *ngIf="!carro.image" src="assets/images/not-available.png" width="130px" height="100px"/>
+            </div>
+            <div class="col-sm-9">
+              <form #frmCarro="ngForm" id="frmCarro" novalidate (ngSubmit)="onSaveCarro()" novalidate>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Titulo:</label>
+                  <div class="col-sm-5">
+                    <input id="txtName"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.titulo"
+                           title="Name"
+                           placeholder="Digite um titulo ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtPreco">Preço:</label>
+                  <div class="col-sm-5">
+                    <input id="txtPreco"
+                           type="number"
+                           class="form-control"
+                           [(ngModel)]="carro.preco"
+                           title="Preco"
+                           placeholder="Digite o preço ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Placa:</label>
+                  <div class="col-sm-5">
+                    <input id="txtPlaca"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.placaDoCarro"
+                           title="Placa"
+                           placeholder="Digite a placa do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Marca:</label>
+                  <div class="col-sm-5">
+                    <input id="txtMarca"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.marca"
+                           title="Marca"
+                           placeholder="Digite a marca do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Modelo:</label>
+                  <div class="col-sm-5">
+                    <input id="txtModelo"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.modelo"
+                           title="Modelo"
+                           placeholder="Digite o modelo do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Ano:</label>
+                  <div class="col-sm-5">
+                    <input id="txtAno"
+                           type="number"
+                           class="form-control"
+                           [(ngModel)]="carro.anoDoModelo"
+                           title="Ano"
+                           placeholder="Digite o ano do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Versão:</label>
+                  <div class="col-sm-5">
+                    <input id="txtVersao"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.versao"
+                           title="Versao"
+                           placeholder="Digite a versão do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Cambio:</label>
+                  <div class="col-sm-5">
+                    <input id="txtCambio"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.cambio"
+                           title="Cambio"
+                           placeholder="Digite o tipo de cambio do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Combustivel:</label>
+                  <div class="col-sm-5">
+                    <input id="txtCombustivel"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.combustivel"
+                           title="Combustivel"
+                           placeholder="Digite o tipo de combustivel do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Direção:</label>
+                  <div class="col-sm-5">
+                    <input id="txtDirecao"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.direcao"
+                           title="Direcao"
+                           placeholder="Digite o tipo da direção do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Potencia do Motor:</label>
+                  <div class="col-sm-5">
+                    <input id="txtPotenciaDoMotor"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.potenciaDoMotor"
+                           title="PotenciaDoMotor"
+                           placeholder="Digite a potência do motor do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Tipo do Veículo:</label>
+                  <div class="col-sm-5">
+                    <input id="txtTipoDeVeiculo"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.tipoDeVeiculo"
+                           title="TipoDeVeiculo"
+                           placeholder="Digite o tipo do veículo ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Quilometragem:</label>
+                  <div class="col-sm-5">
+                    <input id="txtQuilometragem"
+                           type="number"
+                           class="form-control"
+                           [(ngModel)]="carro.quilometragem"
+                           title="Quilometragem"
+                           placeholder="Digite a quilometragem percorrida com o carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Portas:</label>
+                  <div class="col-sm-5">
+                    <input id="txtPortas"
+                           type="number"
+                           class="form-control"
+                           [(ngModel)]="carro.portas"
+                           title="Portas"
+                           placeholder="Digite quantas portas tem o carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Dígito final da placa:</label>
+                  <div class="col-sm-5">
+                    <input id="txtFinalDaPlaca"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.finalDaPlaca"
+                           title="FinalDaPlaca"
+                           placeholder="Digite o final da placa ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Cor:</label>
+                  <div class="col-sm-5">
+                    <input id="txtCor"
+                           type="text"
+                           class="form-control"
+                           [(ngModel)]="carro.cor"
+                           title="Cor"
+                           placeholder="Digite a cor do carro ..." [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div>
+                <!-- <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Opcionais:</label>
+                  <div class="col-sm-5">
+                    <input id="txtAirBag"
+                           type="checkbox"
+                           class="form-control"
+                           [(ngModel)]="carro.airBag"
+                           title="AirBag" [ngModelOptions]="{standalone: true}"
+                    />
+                  </div>
+                </div> -->
+                <!-- <div class="row">
+                  <label class="control-label col-sm-3" for="txtName">Platforms:</label>
+                  <div class="col-sm-5">
+                    <div *ngFor="let p of platforms; let i=index">
+                      <input type="checkbox" [checked]="p.checked" [(ngModel)]="p.checked"
+                             [ngModelOptions]="{standalone: true}"/> {{p.name}}
+                    </div>
+                  </div>
+                </div> -->
+                <div class="row">
+                  <label class="control-label col-sm-3" for="txtDate">Descrição:</label>
+                  <div class="col-sm-5">
+                    <textarea id="txtDescricao"
+                              rows="15"
+                              class="form-control"
+                              [(ngModel)]="carro.descricao"
+                              title="Descricao"
+                              placeholder="Escreva uma descrição ..." [ngModelOptions]="{standalone: true}"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary">Save carro</button>
+                  <div class="btn-group">
+                    <button type="button" (click)="onBack()" class="btn btn-secondary btn-sm">
+                      Back
+                    </button>
+                    <button type="button" (click)="reset()" class="btn btn-warning btn-sm">
+                      Reset
+                    </button>
+                    <button type="button" (click)="delete(carro.id)" class="btn btn-danger btn-sm">
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,35 @@
+export class Carro {
+  id:number;
+  titulo: string;
+  descricao: string;
+  placaDoCarro: string;
+  marca:string;
+  modelo:string;
+  anoDoModelo:string;
+  versao:string;
+  cambio:string;
+  combustivel:string;
+  direcao:string;
+  potenciaDoMotor:string;
+  tipoDeVeiculo:string;
+  quilometragem:number;
+  portas:number;
+  finalDaPlaca:number;
+  cor:string;
+  airBag:boolean;
+  alarme:boolean;
+  arCondicionado:boolean;
+  travaEletrica:boolean;
+  vidroEletrico:boolean;
+  som:boolean;
+  sensorRe:boolean;
+  cameraRe:boolean;
+  blindado:boolean;
+  direcaoHidraulica:boolean;
+  aceitaTrocas:boolean;
+  unicoDono:boolean;
+  preco:number;
+  image: any;
+  estadoFinanceiro: number[];
+  cep: number;
+}
